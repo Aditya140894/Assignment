@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<header>Basic Webpage</header>
+<body>
+
+<p>Given an Input:[(5,5) LLF] Expected Output:(5,4).</p>
+
+<div class="container">
+  <form action="/action_page.php">
+  <div class="row">
+    <div class="col-25">
+      <label for="X-axis">X-axis</label>
+    </div>
+    <div class="col-75">
+      <input type="number" #x id="X" name="x-axis" placeholder="X-axis">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="Y-axis">Y-axis</label>
+    </div>
+    <div class="col-75">
+      <input type="number" #y id="Y" name="y-axis" placeholder="Y-axis">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="Direction">Direction</label>
+    </div>
+    <div class="col-75">
+      <input type="text" #d id="D" name="direction" placeholder="direction">
+    </div>
+  </div>
+  </form>
+</div>
+<div class="row">
+  <button (click)=findNewLocation(x.value,y.value,d.value)>Submit</button>
+</div>
+
+<br/>
+<div class="oph">
+  Output will be displayed below...
+</div>
+<br/>
+<br/>
+<br/>
+<p *ngIf="submitted">
+  New Location is ({{xNew}},{{yNew}}).
+</p>
+
+
+</body>
+<footer>This is just a demo</footer>
+</html>
